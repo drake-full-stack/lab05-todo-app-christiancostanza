@@ -59,7 +59,8 @@ function App() {
           checked={task.completed}
           onChange={() => handleToggle(index)}
         />
-        <span className="task-text">{task.text}</span>
+
+        <span className={task.completed ? "task-text completed" : "task-text"}>{task.text}</span>
         <button
           className="delete-button"
           onClick={() => handleDelete(index)}
